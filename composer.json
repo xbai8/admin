@@ -1,0 +1,20 @@
+{
+  "name": "xbase/admin",
+  "description": "渐进式开源低代码零前端后台核心模块",
+  "type": "library",
+  "authors": [
+    {
+      "name": "楚羽幽",
+      "email": "cy958416459@qq.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "xbase\\admin\\": "src/"
+    },
+    "files": [
+      "./src/helpers.php"
+    ]
+  }
+}
