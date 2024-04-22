@@ -1,6 +1,6 @@
 <?php
 
-namespace xbase\utils;
+namespace xbase\admin\utils;
 
 /**
  * JSON工具类

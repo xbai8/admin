@@ -1,6 +1,7 @@
 <?php
-namespace xbase;
-use xbase\utils\JsonUtil;
+namespace xbase\admin;
+
+use xbase\admin\utils\JsonUtil;
 
 class XbController
 {
@@ -12,7 +13,7 @@ class XbController
      * @copyright 贵州小白基地网络科技有限公司
      * @author 楚羽幽 cy958416459@qq.com
      */
-    protected function __construct()
+    public function __construct()
     {
         $this->initialize();
     }
@@ -25,5 +26,24 @@ class XbController
      */
     protected function initialize()
     {
+    }
+    
+    /**
+     * 渲染系统视图
+     * @return string
+     * @copyright 贵州小白基地网络科技有限公司
+     * @author 楚羽幽 cy958416459@qq.com
+     */
+    protected function adminView()
+    {
+        $path = str_replace("\\",'/',__DIR__) . '/resources/xbase/index.html';
+        if (!file_exists($path)) {
+            throw new \Exception('未找到系统视图资源文件');
+        }
+        $content = file_get_contents($path);
+        if (!$content) {
+            throw new \Exception('系统视图资源文件内容为空');
+        }
+        return (string)$content;
     }
 }

@@ -1,0 +1,140 @@
+[
+    {
+        "title": "首页",
+        "pid": 0,
+        "component": "none/index",
+        "path": "Admin/systemIndex",
+        "is_show": "1",
+        "icon": "HomeOutlined",
+        "sort": "100",
+        "is_default": "10",
+        "params": "",
+        "is_system": "10",
+        "is_api": "10",
+        "methods": [
+            "GET"
+        ],
+        "children": [
+            {
+                "title": "渲染后台视图",
+                "component": "none/index",
+                "path": "Index/index",
+                "is_show": "10",
+                "icon": "",
+                "params": "",
+                "is_system": "20",
+                "is_default": "20",
+                "is_api": "20",
+                "methods": [
+                    "GET"
+                ],
+                "children": []
+            },
+            {
+                "path": "Index/site",
+                "title": "获取应用信息",
+                "is_system": "20",
+                "is_show": "10",
+                "icon": "",
+                "component": "none/index",
+                "params": "",
+                "is_default": "10",
+                "is_api": "20",
+                "methods": [
+                    "GET"
+                ],
+                "children": []
+            },
+            {
+                "title": "系统登录",
+                "component": "none/index",
+                "path": "Login/login",
+                "is_show": "10",
+                "icon": "",
+                "is_default": "10",
+                "params": "",
+                "is_system": "10",
+                "is_api": "20",
+                "methods": [
+                    "POST"
+                ],
+                "children": []
+            },
+            {
+                "path": "Login/user",
+                "title": "获取用户信息",
+                "is_system": "20",
+                "is_show": "10",
+                "icon": "",
+                "component": "none/index",
+                "params": "",
+                "is_default": "10",
+                "is_api": "20",
+                "methods": [
+                    "GET"
+                ],
+                "children": []
+            },
+            {
+                "title": "退出登录",
+                "component": "none/index",
+                "path": "Login/exit",
+                "is_show": "10",
+                "icon": "",
+                "params": "",
+                "is_system": "10",
+                "is_default": "10",
+                "is_api": "20",
+                "methods": [
+                    "GET"
+                ],
+                "children": []
+            },
+            {
+                "path": "Index/clear",
+                "title": "清除缓存",
+                "is_system": "20",
+                "is_show": "10",
+                "icon": "",
+                "component": "none/index",
+                "params": "",
+                "is_default": "10",
+                "is_api": "20",
+                "methods": [
+                    "GET"
+                ],
+                "children": []
+            },
+            {
+                "title": "解除锁定",
+                "component": "none/index",
+                "path": "Index/lock",
+                "is_show": "10",
+                "is_default": "10",
+                "icon": "",
+                "params": "",
+                "is_system": "10",
+                "is_api": "20",
+                "methods": [
+                    "GET"
+                ],
+                "children": []
+            },
+            {
+                "title": "个人信息",
+                "component": "remote/index",
+                "path": "User/info",
+                "params": "/remote/author/user/index",
+                "is_show": "10",
+                "is_default": "10",
+                "icon": "",
+                "is_system": "10",
+                "is_api": "20",
+                "methods": [
+                    "GET"
+                ],
+                "children": []
+            }
+        ]
+    }
+]

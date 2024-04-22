@@ -1,47 +1,50 @@
 <?php
-namespace xbase;
+namespace xbase\admin;
 
+/**
+ * 安装类
+ * @copyright 贵州小白基地网络科技有限公司
+ * @author 楚羽幽 cy958416459@qq.com
+ */
 class Install
 {
     /**
+     * 配置文件路径
      * @var array
      */
     protected static $pathRelation = [
-        'config/plugin/webman/console' => 'config/plugin/webman/console',
+        'config' => 'config/plugin/xbase/admin',
     ];
-
+    
     /**
-     * Install
+     * 执行安装时逻辑
      * @return void
+     * @copyright 贵州小白基地网络科技有限公司
+     * @author 楚羽幽 cy958416459@qq.com
      */
     public static function install()
     {
-        $dest = base_path() . "/webman";
-        if (is_dir($dest)) {
-            echo "Installation failed, please remove directory $dest\n";
-            return;
-        }
-        copy(__DIR__ . "/webman", $dest);
-        chmod(base_path() . "/webman", 0755);
-
+        // 安装配置文件
         static::installByRelation();
     }
-
+    
     /**
-     * Uninstall
+     * 执行卸载时逻辑
      * @return void
+     * @copyright 贵州小白基地网络科技有限公司
+     * @author 楚羽幽 cy958416459@qq.com
      */
     public static function uninstall()
     {
-        if (is_file(base_path() . "/webman")) {
-            unlink(base_path() . "/webman");
-        }
+        // 卸载配置文件
         self::uninstallByRelation();
     }
-
+    
     /**
-     * installByRelation
+     * 扫描目录并复制文件
      * @return void
+     * @copyright 贵州小白基地网络科技有限公司
+     * @author 楚羽幽 cy958416459@qq.com
      */
     public static function installByRelation()
     {
@@ -55,10 +58,12 @@ class Install
             copy_dir(__DIR__ . "/$source", base_path() . "/$dest");
         }
     }
-
+    
     /**
-     * uninstallByRelation
+     * 卸载配置文件
      * @return void
+     * @copyright 贵州小白基地网络科技有限公司
+     * @author 楚羽幽 cy958416459@qq.com
      */
     public static function uninstallByRelation()
     {

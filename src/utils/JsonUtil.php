@@ -1,6 +1,5 @@
 <?php
-
-namespace xbase\utils;
+namespace xbase\admin\utils;
 
 use Exception;
 use support\Response;

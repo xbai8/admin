@@ -1,6 +1,6 @@
 <?php
 
-namespace xbase;
+namespace xbase\admin;
 
 use think\Model as BaseModel;
 
